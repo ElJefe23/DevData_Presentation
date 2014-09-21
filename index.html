@@ -1,1 +1,176 @@
-My two favorite words in the English Language.  De Fault.
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Permeability Predictor</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Permeability Predictor">
+  <meta name="author" content="Jeff Wolbach">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <aside class="gdbar">
+    <img src="assets/img/Heinz_Logo.png">
+  </aside>
+  <hgroup class="auto-fadein">
+    <h1>Permeability Predictor</h1>
+    <h2>a product of D.E., Inc.</h2>
+    <p>Jeff Wolbach<br/>Overeducated Layabout</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Description of Problem</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Oral bioavailability is an important consideration in drug development</p></li>
+<li><p>High oral bioavailability necessary for dosing as tablets</p></li>
+<li><p>Tablet dosing leads to much stronger patient compliance and less-expensive treatment.</p></li>
+<li><p>It is very economically advantageous to fail compounds with poor oral bioavailability early in development</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Available Measures</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>Ideal measure would be fractional drug absorbance in humans.  But ... <i>in vivo</i> assays are difficult and expensive</li>
+<li><i>in vitro</i> assays are much more cost-effective and parallelizable</li>
+<li>Assays have been shown to correlate well with fractional drug absorbance.</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="assets/fig/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Even Cheaper Than Experiment</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>We can model the in vitro permeability using a few physical parameters of our molecules</li>
+</ul>
+
+<p>log P(apparent) = -1.64 + 0.85 * log K(O/W) - 0.025 * TPSA - 0.27 * (pKa - pH)</p>
+
+<p>K(O/w) = octanol-water partition coefficient</p>
+
+<p>TPSA = Total polar surface area of molecule</p>
+
+<p>pKa = -base-10 logarithm of acidity constant for molecule</p>
+
+<p>pH = -base-10 logarithm of H+ activity in assay solution</p>
+
+<p>(pKa - pH) = likelihood molecule is charged</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Utility of Application</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><img src="assets/fig/unnamed-chunk-2.png" alt="plot of chunk unnamed-chunk-2"> </p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <ul>
+<li>Properties are easily calculated from a webform</li>
+<li>Analyst can visualize the permeability of their compound, even before synthesis.</li>
+<li><p>Allows analysts to concentrate on making compounds that will not fail early</p></li>
+<li><p>Next generation of app will allow user to draw molecule to create a fully-automated workflow.</p></li>
+</ul>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Description of Problem'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Available Measures'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Even Cheaper Than Experiment'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Utility of Application'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
